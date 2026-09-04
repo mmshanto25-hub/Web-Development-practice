@@ -1,0 +1,47 @@
+.box{
+    height: 400px;
+    width: 400px;
+    background-color: blueviolet;
+    margin: 100px auto;
+    position: relative;
+    /*
+    animation-name: square;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+*/
+    animation: square 4s linear 2s infinite alternate backwards running;
+}
+@keyframes square{
+    0%{
+        background-color: blueviolet;
+        left: 0;
+        right: 0;
+    }
+    25%{
+        background-color: blue;
+        left: 500px;
+        right: 0;
+}
+    50%{
+        background-color: brown;
+        left: 500px;
+        right: 500px;
+        border-radius: 50%;
+    }
+    75%{
+        background-color: chocolate;
+        left: 0;
+        right: 500px;
+    }
+    100%{
+        background-color: aquamarine;
+        left: 0;
+        right: 0;
+        border-radius: 0px;
+    }
+}

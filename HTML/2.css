@@ -1,0 +1,9 @@
+.p1{
+   border: 5px solid red ;
+   border-radius: 10px;
+}
+
+#p2{
+  border: 10px dotted green;
+  border-radius: 20px;
+}
