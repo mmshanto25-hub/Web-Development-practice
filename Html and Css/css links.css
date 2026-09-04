@@ -1,0 +1,22 @@
+a{
+    color: blue;
+    text-decoration: underline;
+    background-color: yellow;
+    font-size: 50px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+a:hover{
+    color: red;
+    text-decoration: none;
+    background-color: lightgray;
+}   
+a:visited{
+    color: purple;
+    background-color: lightblue;
+}
+a:active{
+    color: green;
+    background-color: lightgreen;
+}

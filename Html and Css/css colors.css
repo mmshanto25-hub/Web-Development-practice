@@ -1,0 +1,14 @@
+h1{
+    color: brown;
+}
+h2{
+    color: rgb(23, 60, 224);
+}
+p{
+    color: #0817ec;
+}
+.box{
+    height: 400px;
+    width: 300px;
+    background: radial-gradient(rgba(255,0,8), green);
+}

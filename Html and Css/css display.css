@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+}
+span{
+    color: red;
+}
+
+ul li{
+    display: inline;
+}

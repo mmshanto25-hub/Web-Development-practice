@@ -1,0 +1,8 @@
+p::first-line{
+    color: red;
+    font-size: 30px;
+
+}
+h1::after{
+    content:url(img1.jpg)
+}

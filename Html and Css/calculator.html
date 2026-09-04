@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #2a2d62, #1c8adb);
+            font-family: Arial, sans-serif;
+        }
+        .calculator {
+            width: 380px;
+            background: #15172b;
+            border-radius: 24px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+            padding: 24px;
+        }
+        .display {
+            width: 100%;
+            min-height: 80px;
+            background: #0f1221;
+            border-radius: 18px;
+            color: #e9f3ff;
+            font-size: 2rem;
+            text-align: right;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-bottom: 18px;
+            overflow-x: auto;
+            word-break: break-all;
+        }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+        button {
+            border: none;
+            border-radius: 14px;
+            padding: 18px 0;
+            font-size: 1rem;
+            color: #f1f4ff;
+            background: #23263f;
+            cursor: pointer;
+            transition: transform 0.1s ease, background 0.2s ease;
+        }
+        button:hover {
+            background: #303654;
+        }
+        button.operator {
+            background: #ff637d;
+        }
+        button.operator:hover {
+            background: #ff3b5f;
+        }
+        button.function {
+            background: #4c5bc8;
+        }
+        button.function:hover {
+            background: #5a6fe5;
+        }
+        button.equal {
+            background: #23d6a6;
+            grid-column: span 2;
+        }
+        button.clear {
+            background: #f5a623;
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div id="display" class="display">0</div>
+        <div class="buttons">
+            <button type="button" class="clear" data-display="C" data-value="C">C</button>
+            <button type="button" class="function" data-display="sin(" data-value="Math.sin(">sin</button>
+            <button type="button" class="function" data-display="cos(" data-value="Math.cos(">cos</button>
+            <button type="button" class="function" data-display="tan(" data-value="Math.tan(">tan</button>
+            <button type="button" class="function" data-display="√(" data-value="Math.sqrt(">√</button>
+            <button type="button" class="function" data-display="log(" data-value="Math.log10(">log</button>
+            <button type="button" class="function" data-display="ln(" data-value="Math.log(">ln</button>
+            <button type="button" class="operator" data-display="^" data-value="**">^</button>
+            <button type="button" data-display="%" data-value="%">%</button>
+            <button type="button" class="operator" data-display="÷" data-value="/">÷</button>
+            <button type="button" data-display="7" data-value="7">7</button>
+            <button type="button" data-display="8" data-value="8">8</button>
+            <button type="button" data-display="9" data-value="9">9</button>
+            <button type="button" class="operator" data-display="×" data-value="*">×</button>
+            <button type="button" data-display="4" data-value="4">4</button>
+            <button type="button" data-display="5" data-value="5">5</button>
+            <button type="button" data-display="6" data-value="6">6</button>
+            <button type="button" class="operator" data-display="-" data-value="-">−</button>
+            <button type="button" data-display="1" data-value="1">1</button>
+            <button type="button" data-display="2" data-value="2">2</button>
+            <button type="button" data-display="3" data-value="3">3</button>
+            <button type="button" class="operator" data-display="+" data-value="+">+</button>
+            <button type="button" data-display="0" data-value="0" style="grid-column: span 2;">0</button>
+            <button type="button" data-display="." data-value=".">.</button>
+            <button type="button" class="function" data-display="π" data-value="Math.PI">π</button>
+            <button type="button" class="equal" data-display="=" data-value="=">=</button>
+        </div>
+    </div>
+    <script>
+        const display = document.getElementById('display');
+        let expression = '';
+        let displayExpression = '';
+
+        function updateDisplay(value) {
+            display.textContent = value || '0';
+        }
+
+        function calculate() {
+            try {
+                const result = Function('return ' + expression)();
+                expression = String(result);
+                displayExpression = expression;
+                updateDisplay(expression);
+            } catch (error) {
+                updateDisplay('Error');
+                expression = '';
+                displayExpression = '';
+            }
+        }
+
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                const value = button.dataset.value;
+                const displayValue = button.dataset.display;
+
+                if (value === 'C') {
+                    expression = '';
+                    displayExpression = '';
+                    updateDisplay('0');
+                    return;
+                }
+
+                if (value === '=') {
+                    calculate();
+                    return;
+                }
+
+                expression += value;
+                displayExpression += displayValue;
+                updateDisplay(displayExpression);
+            });
+        });
+    </script>
+</body>
+</html>

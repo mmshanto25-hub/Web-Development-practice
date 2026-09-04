@@ -1,0 +1,14 @@
+body{  
+  font-family: "Black Ops One", system-ui;
+
+}
+
+h1{
+    font-family: 'Black Ops One', cursive;
+    font-weight: 1000;
+}
+p{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3vw;
+}

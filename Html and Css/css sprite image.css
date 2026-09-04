@@ -1,0 +1,13 @@
+.social{
+    width: 104px;
+    height: 90px;
+    background-image: url(Social_circle.png);
+    background-position: 0 -80px;
+    border-radius: 40%;
+    background-repeat: no-repeat;
+    transition: 1s;
+}
+.social:hover{
+        background-position: 0 -6px;
+
+}

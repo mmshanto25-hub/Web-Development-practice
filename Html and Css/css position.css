@@ -1,0 +1,39 @@
+.box1{
+    width: 480px;
+    height: 320px;
+    background-color: #0da314;
+    position: relative;  
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    border-radius: 50%;
+}
+
+
+
+.name{
+    border: 3px solid rgb(255, 0, 0);
+    margin-top: 20px;
+    width: 400px;
+    background-color: rgb(175, 255, 27);
+    color: rgb(78, 13, 255);
+    position:sticky;
+    top: 0;
+}
+
+p{
+    padding-bottom: 2000px;
+}
+.tutul{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+}

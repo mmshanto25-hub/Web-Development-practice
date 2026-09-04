@@ -1,0 +1,128 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
+}
+
+/*header start*/
+header{
+    width: 100%;
+    background-color: rgb(32, 30, 30);
+    color: rgb(12, 26, 21);
+    display: flex;
+}
+.logo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 15px;
+    padding: 10px;
+    color: #fff;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 200px;
+}
+.navbar ul{
+    list-style: none;
+}
+.navbar ul li{
+    background-color: rgb(12, 12, 12);
+    width: 170px;
+    border: 1px solid #fff;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: aquamarine;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li:hover{
+    background-color: crimson;
+    transition: all ease-in 1s;
+}
+.navbar ul ul{
+    display: none;
+}
+.navbar ul li:hover > ul{
+    display: block;
+}
+/*header End*/
+
+/* from start*/
+
+.form1{
+    background-color: rgb(41, 38, 38);
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    padding: 30px 80px;
+    margin-top: 30px;
+    border-radius: 10%;
+    box-shadow: 0 4px 8px 0 rgba(151, 5, 5, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.form1 input{
+    padding: 5px 50px;
+    border-color: rgba(84, 255, 5, 0.801);
+    border-radius: 50px;
+}
+.form1 .btn{
+    font-weight: bold;
+    
+}
+
+/* from end*/
+
+
+/*footer start*/
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: rgb(31, 30, 30);
+    width: 100%;
+    color: #fff;
+}
+.name h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.text p{
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top: -15px;
+    padding: 10px;
+}
+.icon i{
+    font-size: 40px;
+    position: relative;
+    top: -10px;
+    padding: 10px;
+}
+.copy{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    line-height: 50px;
+    font-size: 15px;
+}
+/* footer end*/

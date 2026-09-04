@@ -1,0 +1,15 @@
+h1{
+    color: gold;
+    background-color: black;
+    text-align: center;
+}
+p{
+    color: white;
+    background-color: black;
+    text-align: left;
+    text-transform: capitalize;
+    text-indent: 50px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+    line-height:40px;
+}

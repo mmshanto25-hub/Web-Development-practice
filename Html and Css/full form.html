@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Signup Form</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f3f6fb;
+            color: #1f2937;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+            padding: 32px;
+        }
+
+        .container {
+            width: min(100%, 720px);
+            background: #ffffff;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 28px;
+            box-shadow: 0 28px 60px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 40px 36px 28px;
+            background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+            color: #ffffff;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 2.5vw, 2.5rem);
+            line-height: 1.05;
+        }
+
+        .header p {
+            margin: 16px 0 0;
+            max-width: 680px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .form-body {
+            padding: 34px 36px 40px;
+            display: grid;
+            gap: 22px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .field {
+            display: grid;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        input,
+        select,
+        datalist,
+        textarea {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            padding: 12px 14px;
+            font-size: 0.98rem;
+            color: #111827;
+            background: #f9fafb;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.12);
+            background: #ffffff;
+        }
+
+        .field-inline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .field-inline label {
+            margin: 0;
+        }
+
+        .field-inline input[type="radio"],
+        .field-inline input[type="checkbox"] {
+            width: auto;
+        }
+
+        .field-inline span {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .field-inline span label {
+            font-weight: 500;
+            color: #374151;
+        }
+
+        textarea {
+            min-height: 112px;
+            resize: vertical;
+        }
+
+        .form-footer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .button {
+            border: none;
+            border-radius: 999px;
+            padding: 14px 24px;
+            font-size: 0.98rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .button-primary {
+            background: #4f46e5;
+            color: #ffffff;
+        }
+
+        .button-secondary {
+            background: #f3f4f6;
+            color: #1f2937;
+        }
+
+        .button:hover {
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 680px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .form-body {
+                padding: 28px 24px 32px;
+            }
+
+            .header {
+                padding: 32px 24px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header class="header">
+            <h1>Professional Signup Form</h1>
+            <p>Complete your registration with a clean, modern form experience. The fields below are organized for clarity, accessibility, and fast submission.</p>
+        </header>
+        <form class="form-body" action="#" method="post">
+            <div class="grid-2">
+                <div class="field">
+                    <label for="user">Full name</label>
+                    <input type="text" id="user" name="user" placeholder="Enter your name" required>
+                </div>
+                <div class="field">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="field">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="password" placeholder="Create a secure password" required>
+                </div>
+                <div class="field">
+                    <label for="date">Date of birth</label>
+                    <input type="date" id="date" name="dob">
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="field">
+                    <label for="phn">Phone number</label>
+                    <div style="display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 12px;">
+                        <select name="code" id="code">
+                            <option value="+880">+880</option>
+                            <option value="+990">+990</option>
+                            <option value="+110">+110</option>
+                        </select>
+                        <input type="tel" id="phn" name="phone" placeholder="0123456789" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="country">Country</label>
+                    <input list="con" id="country" name="country" placeholder="Choose your country">
+                    <datalist id="con">
+                        <option value="Bangladesh">
+                        <option value="India">
+                        <option value="Canada">
+                        <option value="Egypt">
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Gender</label>
+                <div class="field-inline">
+                    <span>
+                        <input type="radio" id="gnd1" name="gender" value="male">
+                        <label for="gnd1">Male</label>
+                    </span>
+                    <span>
+                        <input type="radio" id="gnd2" name="gender" value="female">
+                        <label for="gnd2">Female</label>
+                    </span>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="field">
+                    <label for="colors">Preferred color</label>
+                    <input type="color" id="colors" name="favoriteColor" value="#4f46e5">
+                </div>
+                <div class="field">
+                    <label for="file">Upload profile image</label>
+                    <input type="file" id="file" name="profileImage" accept="image/*">
+                </div>
+            </div>
+
+            <div class="field">
+                <label for="comment">Additional notes</label>
+                <textarea id="comment" name="comment" placeholder="Any details you want to share"></textarea>
+            </div>
+
+            <div class="field-inline">
+                <span>
+                    <input type="checkbox" id="vehicle1" name="vehicle1">
+                    <label for="vehicle1">I have a bike</label>
+                </span>
+                <span>
+                    <input type="checkbox" id="vehicle2" name="vehicle2">
+                    <label for="vehicle2">I have a bicycle</label>
+                </span>
+            </div>
+
+            <div class="form-footer">
+                <button type="reset" class="button button-secondary">Reset</button>
+                <button type="submit" class="button button-primary">Submit</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
