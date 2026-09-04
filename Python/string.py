@@ -1,0 +1,2 @@
+#  str type data
+
