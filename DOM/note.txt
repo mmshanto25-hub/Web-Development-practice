@@ -1,0 +1,11 @@
+what is dom document object model
+
+1. Select HTML element using dom
+
+
+getElementById()
+getElementsByClassName()
+getElementsByName()
+getElementsByTagName()
+querySelector()
+querySelectorAll()

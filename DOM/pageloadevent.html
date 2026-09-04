@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+
+
+
+
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", (e) => {
+        //     alert("DOM is fully loaded")
+
+        // })
+
+
+        // addEventListener("load", () => {
+        //     alert("content is loading")
+        // })
+
+        addEventListener("beforeunload", (e) => {
+            e.preventDefault();
+            e.returnValue = ''
+        })
+    </script>
+    <script src="pageloadevent.js"></script>
+</body>
+
+</html>
